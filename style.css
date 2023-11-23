@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
-    background-color: #252422;
+    background-color: #030303;
 }
 
 h1 {
@@ -10,5 +10,22 @@ h1 {
     letter-spacing: 15px;
     font-size: 50px;
     color: #FFFCF2;
-    text-shadow: #EB5E28 5px 0 10px;
+    text-shadow: #25ac0d 5px 0 10px;
+}
+.games img {
+    width: 200px;
+    height: 150px;
+    box-shadow: 0px 0px 5px #fff;
+}
+
+.blackjack {
+    border: #FFFCF2;
+    border-style: double;
+    color: #FFFCF2;
+    letter-spacing: 10px;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    width: 250px;
+    height: 250px;
 }
