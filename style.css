@@ -1,31 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-* {
-    background-color: #030303;
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000000
 }
 
 h1 {
-    text-align: center;
-    font-family: 'Lobster', sans-serif;
-    letter-spacing: 15px;
-    font-size: 50px;
-    color: #FFFCF2;
-    text-shadow: #25ac0d 5px 0 10px;
+	font-size: calc(2.8em + 2.6vw);
+	letter-spacing: 15px;
+	padding: 0 0 0 4.5rem;
+    font-family: 'Shadows Into Light', cursive;
+	text-shadow: .022em .022em .022em #343333;
+	color: #ffffff;
 }
-.games img {
-    width: 200px;
-    height: 150px;
-    box-shadow: 0px 0px 5px #fff;
+.explore {
+    font-family: 'Poppins';
+    width: 320px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #494949;
+    background: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
 }
 
-.blackjack {
-    border: #FFFCF2;
-    border-style: double;
-    color: #FFFCF2;
-    letter-spacing: 10px;
-    padding: 10px;
-    font-size: 30px;
-    text-align: center;
-    width: 250px;
-    height: 250px;
+.explore:before {
+    content: '';
+    background: linear-gradient(45deg, #FF0000, #FFF700, #FF7000, #FF00FE, #3FF4EB, #9E00FF, #00BEFF, #FF00DD, #FF0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
+
+.explore:active {
+    color: #000
+}
+
+.explore:active:after {
+    background: transparent;
+}
+
+.explore:hover {
+    transform: scale(1.05);
+}
+
+.explore:hover:before {
+    opacity: 1;
+}
+
+.explore:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    left: 0;
+    top: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+Resources
