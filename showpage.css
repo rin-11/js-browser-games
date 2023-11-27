@@ -10,3 +10,13 @@ body {
     background: #000000;
     color: white;
 }
+
+.games h3 {
+    text-align: center;
+    letter-spacing: 5px; 
+}
+
+.games button {
+    padding: 5px;
+    margin: 5px;
+}
