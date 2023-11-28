@@ -1,2 +1,2 @@
 ## JavaScript Arcade
-A collection of multiple vanilla javascript games
+A collection of vanilla javascript games
