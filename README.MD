@@ -1,1 +1,2 @@
-A browser site to host all of the Vanilla Javascript games I have built.
+## JavaScript Arcade
+A collection of multiple vanilla javascript games
