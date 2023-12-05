@@ -1,2 +1,3 @@
 # JavaScript Arcade
-•	Built a website to showcase multiple JavaScript games I developed such as canvas style runner games, snake, blackjack, chess, and more.
+### A gaming platform crafted to host classic JavaScript games, providing users with an immersive in-browser gaming experience.
+Technologies -  JavaScript, HTML, CSS, Netlify, GitHub, Canvas 
