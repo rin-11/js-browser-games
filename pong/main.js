@@ -1,4 +1,6 @@
+// Access the canvas element from the HTML document
 const canvas = document.getElementById('gameCanvas');
+// Get the 2D rendering context for the canvas
 const ctx = canvas.getContext('2d');
 
 let ball, playerPaddle, aiPaddle, playerScore, aiScore, gameInterval;
