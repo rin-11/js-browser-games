@@ -15,5 +15,18 @@ body {
 
 #gameCanvas {
     background-color: #6a6161;
-    margin-top: 20px; 
+    margin: 20px; 
+}
+
+button {
+    font-size: 16px;
+    background-color: rgb(74, 48, 48);
+    color: rgb(247, 245, 245);
+    margin: 8px;
+    padding: 8px;
+}
+
+button:hover {
+    background-color: rgb(224, 144, 238);
+    cursor: pointer;
 }

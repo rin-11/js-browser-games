@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 
 let ball, playerPaddle, aiPaddle, playerScore, aiScore, gameInterval;
 
+
 // Paddle and Ball setup
 function initGame() {
     ball = { x: canvas.width / 2, y: canvas.height / 2, radius: 10, speedX: 5, speedY: 5 };
@@ -11,6 +12,8 @@ function initGame() {
     playerScore = 0;
     aiScore = 0;
 }
+
+
 
 // Draw game objects
 function draw() {
