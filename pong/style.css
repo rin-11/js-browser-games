@@ -16,6 +16,7 @@ body {
 #gameCanvas {
     background-color: #6a6161;
     margin: 20px; 
+    box-shadow: 0 0 5px 5px white;
 }
 
 button {
