@@ -13,10 +13,22 @@ body {
 
 .games h3 {
     text-align: center;
-    letter-spacing: 5px; 
+    letter-spacing: 5px;
 }
 
-.games button {
-    padding: 5px;
-    margin: 5px;
+.games div {
+    margin: 10px;
+    padding: 10px;
 }
+
+img {
+    float: left;
+    width:  250px;
+    height: 250px;
+    object-fit: cover;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
