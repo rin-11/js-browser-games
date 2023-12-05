@@ -3,65 +3,68 @@ const canvas = document.getElementById('gameCanvas');
 // Get the 2D rendering context for the canvas
 const ctx = canvas.getContext('2d');
 
+// Declare game-related variables
 let ball, playerPaddle, aiPaddle, playerScore, aiScore, gameInterval;
 
-
-// Paddle and Ball setup
+// Initializes the game objects
 function initGame() {
+    // Set up the ball in the center with initial speed and direction
     ball = { x: canvas.width / 2, y: canvas.height / 2, radius: 10, speedX: 5, speedY: 5 };
+    // Set up the player's paddle on the left side of the canvas
     playerPaddle = { x: 0, y: canvas.height / 2 - 40, width: 10, height: 80, score: 0 };
+    // Set up the AI's paddle on the right side of the canvas
     aiPaddle = { x: canvas.width - 10, y: canvas.height / 2 - 40, width: 10, height: 80, score: 0 };
+    // Initialize scores for the player and AI
     playerScore = 0;
     aiScore = 0;
 }
 
-
-
-// Draw game objects
+// Function to draw game objects on the canvas
 function draw() {
-    // Clear canvas
+    // Clear the entire canvas to redraw the game frame
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw ball
+    // Set the color and draw the ball
     ctx.fillStyle = 'pink';
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2, true);
     ctx.fill();
 
-    // Draw paddles
+    // Set the color and draw the player's paddle
     ctx.fillStyle = 'purple';
     ctx.fillRect(playerPaddle.x, playerPaddle.y, playerPaddle.width, playerPaddle.height);
+    // Draw the AI's paddle
     ctx.fillRect(aiPaddle.x, aiPaddle.y, aiPaddle.width, aiPaddle.height);
 
-    // Draw scores
+    // Set the color and font, then draw the scores
     ctx.fillStyle = 'white';
     ctx.font = '20px Arial';
     ctx.fillText(`Player: ${playerScore}`, 20, 30);
     ctx.fillText(`AI: ${aiScore}`, canvas.width - 100, 30);
 }
 
-// Update game objects
+// Update game logic
 function update() {
-    // Ball movement
+    // Update the ball's position based on its speed
     ball.x += ball.speedX;
     ball.y += ball.speedY;
 
-    // Ball collision with top and bottom
+    // Reverse the ball's vertical direction if it hits the top or bottom
     if (ball.y < 0 || ball.y > canvas.height) {
         ball.speedY *= -1;
     }
 
-    // Ball collision with paddles
+    // Reverse the ball's horizontal direction if it hits a paddle
     if (ball.x < 20 && ball.y > playerPaddle.y && ball.y < playerPaddle.y + playerPaddle.height) {
         ball.speedX *= -1;
     } else if (ball.x > canvas.width - 20 && ball.y > aiPaddle.y && ball.y < aiPaddle.y + aiPaddle.height) {
         ball.speedX *= -1;
     }
 
-    // AI movement
+    // Update AI's paddle position to follow the ball
     aiPaddle.y += (ball.y - aiPaddle.y - aiPaddle.height / 2) * 0.1;
 
-    // Scoring
+    // Update the score and reset the ball if it goes past a paddle
     if (ball.x < 0) {
         aiScore++;
         resetBall();
@@ -70,13 +73,13 @@ function update() {
         resetBall();
     }
 
-    // Check for game over
+    // Stop the game if either player reaches a score of 10
     if (playerScore === 10 || aiScore === 10) {
         stopGame();
     }
 }
 
-// Reset ball position
+// Resets the ball to the center with initial speed
 function resetBall() {
     ball.x = canvas.width / 2;
     ball.y = canvas.height / 2;
@@ -84,7 +87,7 @@ function resetBall() {
     ball.speedY = 5;
 }
 
-// Start the game
+// Starts the game by initializing and setting the game loop
 function startGame() {
     if (!gameInterval) {
         initGame();
@@ -95,14 +98,15 @@ function startGame() {
     }
 }
 
-// Stop the game
+// Stops the game by clearing the game loop interval
 function stopGame() {
     clearInterval(gameInterval);
     gameInterval = null;
 }
 
-// Keyboard controls
+// Event listener for keyboard controls
 document.addEventListener('keydown', function (event) {
+    // Move the player's paddle up or down based on arrow key presses
     if (event.key === 'ArrowUp') {
         playerPaddle.y -= 20;
     } else if (event.key === 'ArrowDown') {
@@ -110,8 +114,9 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-// Start button
+// Event listener for the start button
 document.getElementById('startButton').addEventListener('click', startGame);
 
+// Initial call to set up and draw the initial game state
 initGame();
 draw();
