@@ -20,6 +20,10 @@ body {
     margin: 10px;
     padding: 10px;
 }
+
+.breakout, .pong, .flappy-bird, .blackjack, .space-invaders, .snake {
+    box-shadow: 0 0 5px 5px white;
+}
 .games div:hover {
     transform: scale(1.05);
 }
