@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +11,7 @@ body {
     align-items: center;
     background: #000000;
     color: white;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .games h3 {
