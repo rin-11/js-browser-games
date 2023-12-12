@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="gameCanvas" width="640" height="480"></canvas>
-    <div id="controls">
-        <button id="startBtn">Start</button>
-        <button id="hitBtn">Hit</button>
+    <div id="control-panel" >
+        <button id="startBtn">Start Game</button>
+        </div>
+        <canvas id="gameCanvas" width="640" height="480"></canvas>
+        <div class="game-controls">
+            <button id="hitBtn">Hit</button>
         <button id="stayBtn">Stay</button>
-        <div>Bet: <button id="increaseBet">+</button><span id="bet">$5</span><button id="decreaseBet">-</button></div>
+        <div>Bet: <button id="increaseBet">Increase Bet</button><span id="bet">$5</span><button id="decreaseBet">Decrease Bet</button>
+        </div>
+        <div class="gamescreen">
+            <a href="../games.html">
+                <button class="gamescreen">Back to Games</button>
+            </a>
+        </div>
     </div>
     <script src="main.js"></script> 
 </body>
