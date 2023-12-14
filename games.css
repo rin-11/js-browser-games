@@ -21,9 +21,10 @@ body {
 .games div {
     margin: 10px;
     padding: 10px;
+    justify-content: center;
 }
 
-.breakout, .pong, .flappy-bird, .blackjack, .space-invaders, .snake, .tic-tac-toe, .chess, .hangman {
+.breakout, .pong, .flappy-bird, .blackjack, .space-invaders, .snake, .tic-tac-toe {
     box-shadow: 0 0 5px 5px white;
 }
 .games div:hover {
