@@ -13,25 +13,32 @@ body {
 }
 
 canvas {
-    background: #eee;
+    background: #000000;
     display: block;
     margin: auto;
+    box-shadow: 0 0 5px 5px white;
+    cursor: crosshair;
 }
 
 #score {
     margin-top: 10px;
+    letter-spacing: 2px;
+    font-size: 25px;
 }
 
 
 button {
     font-size: 16px;
-    background-color: rgb(74, 48, 48);
-    color: rgb(247, 245, 245);
+    background-color: white;
+    color: black;
     margin: 8px;
     padding: 8px;
+    letter-spacing: 2px;
+    border-radius: 10px;
 }
 
 button:hover {
-    background-color: rgb(224, 144, 238);
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
