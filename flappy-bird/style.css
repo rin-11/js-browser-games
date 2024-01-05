@@ -7,6 +7,11 @@ body {
     background-color: #000;
 }
 
+p {
+    color: white;
+    letter-spacing: 2px;
+}
+
 .game-container {
     display: flex;
     flex-direction: column; 
@@ -21,13 +26,16 @@ body {
 
 button {
     font-size: 16px;
-    background-color: rgb(74, 48, 48);
-    color: rgb(247, 245, 245);
+    background-color: white;
+    color: black;
     margin: 8px;
     padding: 8px;
+    letter-spacing: 2px;
+    border-radius: 10px;
 }
 
 button:hover {
-    background-color: rgb(224, 144, 238);
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
