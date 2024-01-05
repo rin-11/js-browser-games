@@ -24,7 +24,7 @@ body {
     justify-content: center;
 }
 
-.breakout, .pong, .flappy-bird, .blackjack, .space-invaders, .snake, .tic-tac-toe {
+.breakout, .pong, .flappy-bird, .blackjack, .space-invaders, .snake {
     box-shadow: 0 0 5px 5px white;
 }
 .games div:hover {
