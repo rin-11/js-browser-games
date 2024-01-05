@@ -62,7 +62,7 @@ function drawSnake() {
     // Loop through each segment of the snake
     snake.forEach(segment => {
         // Set the fill color for the snake segment
-        ctx.fillStyle = 'yellow';
+        ctx.fillStyle = 'green';
         // Set the shadow color and blur for a shadow effect
         ctx.shadowColor = 'black';
         ctx.shadowBlur = 10;
